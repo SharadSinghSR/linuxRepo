@@ -1,0 +1,111 @@
+#!/bin/bash
+echo "Hello World..."
+
+
+#!/usr/bin/bash
+echo "File Name: $0"
+echo "First Parameter : $1"
+echo "Second Parameter : $2"
+echo  "Quoted Values:----"
+echo "$@"
+for i in "$@"
+do
+    echo "$i"
+done
+echo "$*"
+for i in $*
+do
+    echo "$i"
+done
+
+echo "Quoted Values:----"
+echo "$*"
+echo "Total Number of Parameters : $#"
+
+
+
+#!/usr/bin/bash
+echo "first num -"
+read x
+echo "second num -"
+read y
+if [ $x -gt $y -a $x -gt 50 ]
+then
+    echo "x is greater"
+fi
+echo $(($x+$y))
+
+
+
+
+#!/usr/bin/bash
+echo "Enter File Name -"
+read fname
+if [ -e $fname ] 
+then
+    echo "file exists"
+else
+        echo "file does not exists"
+fi
+
+
+
+
+
+#!/usr/bin/bash
+
+for folder in *
+do
+    if [ -d $folder ]
+    then
+        echo "Folder - $folder"
+    
+    elif [ -f $folder ] 
+    then
+        echo "File - $folder"
+    fi
+done
+
+
+
+#FOR LOOP TO RENAME FILES
+ FILES=$(ls *.txt)
+ NEW="new"
+ for FILE in $FILES
+  do
+    echo "Renaming $FILE to new-$FILE"
+    mv $FILE $NEW-$FILE
+  done
+
+
+
+
+echo "System variables"    
+echo $BASH 
+echo $BASH_VERSION
+echo $HOME
+echo $PWD
+
+echo "User variables"   
+name="Sharad Singh"
+echo $name
+num=21
+echo $num
+echo $((num+1))
+
+
+
+#!/usr/bin/bash
+echo "Enter 2 num "
+read x y
+if [ $x -gt $y -a $x -gt 50 ]
+then
+    echo "x is greater"
+fi
+echo $(($x+$y))
+
+
+read -p "Enter 2 num " a b
+echo $(($a+$b))
+
+
