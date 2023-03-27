@@ -1,4 +1,6 @@
 #!/usr/bin/bash
+
+# read multiple
 echo "Enter 2 num "
 read x y
 if [ $x -gt $y -a $x -gt 50 ]
