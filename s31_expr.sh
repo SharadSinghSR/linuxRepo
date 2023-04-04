@@ -12,5 +12,3 @@ echo $(($x+$y))
 
 read -p "Enter 2 num " a b
 echo $(($a+$b))
-
-

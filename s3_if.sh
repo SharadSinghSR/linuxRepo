@@ -5,7 +5,7 @@ echo "second num -"
 read y
 if [ $x -gt $y -a $x -gt 50 ]
 then
-    echo "x is greater"
+    echo "$x is greater than $y"
 fi
 echo $(($x+$y))
 echo $(( 5 + 6 ))
